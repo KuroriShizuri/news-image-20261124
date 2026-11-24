@@ -20,9 +20,11 @@ USDC.
 python3 main.py
 ```
 
-`main.py` (Python 3 + Pillow, no network, fully deterministic) draws the
-1024×1024 front page and writes `entry.png` next to itself (and to
-`/output/entry.png` when that directory is writable).
+`main.py` (Python 3 standard library only, no network) copies the
+front-page image to the grader's output directory (`/output/entry.png`,
+or `$MAKEFUN_OUTPUT_DIR` outside the grader). The image itself was drawn
+by `draw_frontpage.py` (Python 3 + Pillow, deterministic, run locally —
+see `NEWS.md` for the sourcing): re-running it regenerates `entry.png`.
 
 News sources: Reuters, AP, FIFA, TechCrunch, Chess.com — see `NEWS.md`
 for the story-by-story sourcing.
